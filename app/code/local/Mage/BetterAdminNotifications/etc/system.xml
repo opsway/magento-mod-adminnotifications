@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <general>
+            <groups>
+                <better_admin_notifications translate="label" module="betteradminnotifications">
+                    <label>Admin Notifications</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>900</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        <fields>
+                            <enabled translate="label comment">
+                                <label>Enable</label>
+                                <comment><![CDATA[Enables the module (simply hides notifications)]]></comment>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>1</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </enabled>
+                            <only_popup translate="label comment">
+                                <label>Disable only Popup Window</label>
+                                <comment><![CDATA[If yes only popups would be hidden. If no - notifications status bar would also be hidden]]></comment>
+                                <frontend_type>select</frontend_type>
+                                <source_model>adminhtml/system_config_source_yesno</source_model>
+                                <sort_order>5</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </only_popup>
+                        </fields>
+                </better_admin_notifications>
+            </groups>
+        </general>
+    </sections>
+</config>

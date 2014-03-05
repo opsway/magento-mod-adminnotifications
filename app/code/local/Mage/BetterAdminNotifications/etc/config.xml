@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Mage_BetterAdminNotifications>
+            <version>1.1.0</version>
+        </Mage_BetterAdminNotifications>
+    </modules>
+    <global>
+        <helpers>
+            <betteradminnotifications>
+                <class>Mage_BetterAdminNotifications_Helper</class>
+            </betteradminnotifications>
+        </helpers>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <notification_window>Mage_BetterAdminNotifications_Block_Notification_Window</notification_window>
+                    <notification_toolbar>Mage_BetterAdminNotifications_Block_Notification_Toolbar</notification_toolbar>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <better_admin_notifications translate="title" module="betteradminnotifications">
+                                            <title>Control Admin Notifications</title>
+                                            <sort_order>700</sort_order>
+                                        </better_admin_notifications>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <general>
+            <better_admin_notifications>
+                    <enabled>1</enabled>
+                    <only_popup>0</only_popup>            
+            </better_admin_notifications>
+        </general>
+    </default>
+</config>
